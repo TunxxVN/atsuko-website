@@ -1,65 +1,410 @@
 const commandsData = {
-  category1: {
-    icon: "📜",
-    title: "Category 1",
+  info: {
+    icon: "ℹ️",
+    title: "Information",
     commands: [
       {
-        name: "/command1",
-        description: "Description of command1",
+        name: "/help",
+        description: "Get help with bot commands and features",
         permission: "All",
       },
       {
-        name: "/command2",
-        description: "Description of command2",
+        name: "/botinfo",
+        description: "Display information about the bot",
+        permission: "All",
+      },
+      {
+        name: "/serverinfo",
+        description: "Display information about the server",
+        permission: "All",
+      },
+      {
+        name: "/userinfo",
+        description: "Display information about a user",
+        permission: "All",
+      },
+      {
+        name: "/channelinfo",
+        description: "Display information about a channel",
+        permission: "All",
+      },
+      {
+        name: "/roleinfo",
+        description: "Display information about a role",
+        permission: "All",
+      },
+      {
+        name: "/ping",
+        description: "Check bot latency and response time",
+        permission: "All",
+      },
+      {
+        name: "/invite",
+        description: "Get bot invite link with custom permissions",
+        permission: "All",
+      },
+      {
+        name: "/changelog",
+        description: "View recent bot updates and changes",
         permission: "All",
       },
     ],
   },
-  category2: {
-    icon: "⚙️",
-    title: "Category 2",
+  ai: {
+    icon: "🤖",
+    title: "AI",
     commands: [
       {
-        name: "/command3",
-        description: "Description of command3",
-        permission: "Admin",
-      },
-      {
-        name: "/command4",
-        description: "Description of command4",
-        permission: "Admin",
+        name: "/chat",
+        description: "Chat with Atsuko's AI powered by Gemini",
+        permission: "All",
       },
     ],
   },
-  category3: {
+  music: {
+    icon: "🎵",
+    title: "Music",
+    commands: [
+      {
+        name: "/play",
+        description: "Play music from various sources",
+        permission: "All",
+      },
+      {
+        name: "/pause",
+        description: "Pause the current track",
+        permission: "All",
+      },
+      {
+        name: "/skip",
+        description: "Skip to the next track",
+        permission: "All",
+      },
+      {
+        name: "/stop",
+        description: "Stop music and clear the queue",
+        permission: "All",
+      },
+      {
+        name: "/queue",
+        description: "View the current music queue",
+        permission: "All",
+      },
+      {
+        name: "/volume",
+        description: "Adjust the music volume",
+        permission: "All",
+      },
+      {
+        name: "/loop",
+        description: "Toggle loop mode for tracks or queue",
+        permission: "All",
+      },
+      {
+        name: "/shuffle",
+        description: "Shuffle the current queue",
+        permission: "All",
+      },
+      {
+        name: "/lyrics",
+        description: "Get lyrics for the current track",
+        permission: "All",
+      },
+      {
+        name: "/search",
+        description: "Search for music tracks",
+        permission: "All",
+      },
+      {
+        name: "/playlist",
+        description: "Manage your music playlists",
+        permission: "All",
+      },
+      {
+        name: "/filters",
+        description: "Apply audio filters to music",
+        permission: "All",
+      },
+      {
+        name: "/join",
+        description: "Join your voice channel",
+        permission: "All",
+      },
+      {
+        name: "/leave",
+        description: "Leave the voice channel",
+        permission: "All",
+      },
+    ],
+  },
+  fun: {
     icon: "🎮",
-    title: "Category 3",
+    title: "Fun & Games",
     commands: [
       {
-        name: "/command5",
-        description: "Description of command5",
+        name: "/games",
+        description: "Play various mini-games like 2048, Snake, TicTacToe",
         permission: "All",
       },
       {
-        name: "/command6",
-        description: "Description of command6",
+        name: "/8ball",
+        description: "Ask the magic 8-ball a question",
+        permission: "All",
+      },
+      {
+        name: "/activities",
+        description: "Start Discord activities in voice channels",
+        permission: "All",
+      },
+      {
+        name: "/meme",
+        description: "Get random memes from various subreddits",
+        permission: "All",
+      },
+      {
+        name: "/ship",
+        description: "Ship two users and see their compatibility",
+        permission: "All",
+      },
+      {
+        name: "/pp",
+        description: "Measure someone's pp size (fun command)",
+        permission: "All",
+      },
+      {
+        name: "/impersonate",
+        description: "Impersonate another user with webhooks",
+        permission: "Manage Webhooks",
+      },
+    ],
+  },
+  utility: {
+    icon: "🛠️",
+    title: "Utility",
+    commands: [
+      {
+        name: "/avatar",
+        description: "Get a user's avatar in high quality",
+        permission: "All",
+      },
+      {
+        name: "/calculator",
+        description: "Perform mathematical calculations",
+        permission: "All",
+      },
+      {
+        name: "/color",
+        description: "Get information about colors and generate palettes",
+        permission: "All",
+      },
+      {
+        name: "/define",
+        description: "Get definitions of words",
+        permission: "All",
+      },
+      {
+        name: "/translate",
+        description: "Translate text between languages",
+        permission: "All",
+      },
+      {
+        name: "/weather",
+        description: "Get weather information for any location",
+        permission: "All",
+      },
+      {
+        name: "/qr",
+        description: "Generate QR codes for text or URLs",
+        permission: "All",
+      },
+      {
+        name: "/snipe",
+        description: "View recently deleted messages",
+        permission: "All",
+      },
+      {
+        name: "/koutube",
+        description: "Search and get YouTube video information",
+        permission: "All",
+      },
+      {
+        name: "/bug-report",
+        description: "Report bugs to the developers",
+        permission: "All",
+      },
+      {
+        name: "/bot-suggest",
+        description: "Suggest new features for the bot",
         permission: "All",
       },
     ],
   },
-  category4: {
-    icon: "🛠️",
-    title: "Category 4",
+  moderation: {
+    icon: "🛡️",
+    title: "Moderation",
     commands: [
       {
-        name: "/command7",
-        description: "Description of command7",
-        permission: "Mod",
+        name: "/ban",
+        description: "Ban a user from the server",
+        permission: "Ban Members",
       },
       {
-        name: "/command8",
-        description: "Description of command8",
-        permission: "Mod",
+        name: "/kick",
+        description: "Kick a user from the server",
+        permission: "Kick Members",
+      },
+      {
+        name: "/timeout",
+        description: "Timeout a user for a specified duration",
+        permission: "Moderate Members",
+      },
+      {
+        name: "/untimeout",
+        description: "Remove timeout from a user",
+        permission: "Moderate Members",
+      },
+      {
+        name: "/warn",
+        description: "Warn a user for rule violations",
+        permission: "Moderate Members",
+      },
+      {
+        name: "/warnings",
+        description: "View warnings for a user",
+        permission: "Moderate Members",
+      },
+      {
+        name: "/clear",
+        description: "Clear messages from a channel",
+        permission: "Manage Messages",
+      },
+      {
+        name: "/purge",
+        description: "Purge messages with advanced filters",
+        permission: "Manage Messages",
+      },
+      {
+        name: "/lock",
+        description: "Lock a channel to prevent messages",
+        permission: "Manage Channels",
+      },
+      {
+        name: "/unlock",
+        description: "Unlock a previously locked channel",
+        permission: "Manage Channels",
+      },
+      {
+        name: "/slowmode",
+        description: "Set slowmode for a channel",
+        permission: "Manage Channels",
+      },
+      {
+        name: "/nick",
+        description: "Change a user's nickname",
+        permission: "Manage Nicknames",
+      },
+      {
+        name: "/nuke",
+        description: "Clone and delete a channel (nuke)",
+        permission: "Manage Channels",
+      },
+      {
+        name: "/unban",
+        description: "Unban a user from the server",
+        permission: "Ban Members",
+      },
+    ],
+  },
+  admin: {
+    icon: "⚙️",
+    title: "Administration",
+    commands: [
+      {
+        name: "/giveaway",
+        description: "Create and manage server giveaways",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/autorole",
+        description: "Set up automatic role assignment",
+        permission: "Manage Roles",
+      },
+      {
+        name: "/welcome",
+        description: "Configure welcome messages and settings",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/serverlogs",
+        description: "Configure server logging channels",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/setlanguage",
+        description: "Set the bot's language for this server",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/guildsettings",
+        description: "Configure various guild settings",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/automod",
+        description: "Configure automatic moderation settings",
+        permission: "Manage Guild",
+      },
+    ],
+  },
+  image: {
+    icon: "🖼️",
+    title: "Image",
+    commands: [
+      {
+        name: "/image",
+        description: "Generate and manipulate images with filters",
+        permission: "All",
+      },
+      {
+        name: "/anime",
+        description: "Get random anime images and character info",
+        permission: "All",
+      },
+    ],
+  },
+  minecraft: {
+    icon: "⛏️",
+    title: "Minecraft",
+    commands: [
+      {
+        name: "/serverStatus",
+        description: "Check Minecraft server status and info",
+        permission: "All",
+      },
+      {
+        name: "/addSeverStatus",
+        description: "Add a Minecraft server to status tracking",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/removeServerStatus",
+        description: "Remove a server from status tracking",
+        permission: "Manage Guild",
+      },
+      {
+        name: "/listServers",
+        description: "List all tracked Minecraft servers",
+        permission: "All",
+      },
+      {
+        name: "/skin",
+        description: "Get Minecraft player skin and info",
+        permission: "All",
+      },
+      {
+        name: "/achievement",
+        description: "Generate custom Minecraft achievements",
+        permission: "All",
       },
     ],
   },
@@ -489,7 +834,7 @@ function initializeWebsite() {
 async function updateGitHubStats() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/redolenthalo/discord-bot-website-template",
+      "https://api.github.com/repos/TunxxVN/atsuko-website",
     );
     const data = await response.json();
 
