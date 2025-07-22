@@ -2,6 +2,7 @@
 
 > A sleek, modern landing page template for Discord bots powered by HTML, TailwindCSS, and GSAP animations.
 
+![Website Status](https://api.netlify.com/api/v1/badges/c3f8e046-5b06-4397-b7cc-d53f36ae60bf/deploy-status)
 ![License](https://img.shields.io/badge/license-MIT-red.svg)
 ![HTML](https://img.shields.io/badge/HTML-5-red.svg)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-red.svg)
